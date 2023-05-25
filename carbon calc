@@ -1,0 +1,556 @@
+from tkinter import *
+from PIL import ImageTk,Image
+
+
+screen = Tk()
+
+screen.geometry('1000x600')
+screen.configure(background="#ececec")
+def next():
+
+    def clear2():
+        """user_entry1.delete(0, END)"""
+        b1 = userinfo1.get()
+        c11 = 2
+        c22 = 4
+        c33 = 6
+        c44 = 8
+        c55 = 10
+        if b1 == "1":
+            d = c11
+            """Label(screen, text=d, fg="blue").place(x=850, y=200)"""
+        elif b1 == "2":
+            d = c22
+            """Label(screen, text=d, fg="blue").place(x=850, y=200)"""
+        elif b1 == "3":
+            d = c33
+            """Label(screen, text=d, fg="blue").place(x=850, y=200)"""
+        elif b1 == "4":
+            d = c44
+            """Label(screen, text=d, fg="blue").place(x=850, y=200)"""
+        elif b1 == "4+":
+            d = c55
+            """Label(screen, text=d, fg="blue").place(x=850, y=200)"""
+
+        b = userinfo2.get()
+
+        c1 = 2
+        c2 = 4
+        c3 = 6
+        c4 = 8
+
+        if b == "I stay in apartments":
+            e = c1
+            """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+        elif b == "small":
+            e = c2
+            """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+        elif b == "medium":
+            e = c3
+            """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+        elif b == "large":
+            e = c4
+            """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+        f=d+e
+        Label(screen, text=(f), fg="#38ae3c", bg="#ececec", font="ariel 16 bold").place(x=602, y=285)
+        if f < 5:
+            Label(screen, text="Your contribution is very good towards environment", fg="grey", bg="#ececec", font="ariel 13 ").place(x=474, y=330)
+            Label(screen, text="in this aspect. Please keep that consistent.Less the", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=352)
+            Label(screen, text="size of home, less is impact on the environment,", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=374)
+            Label(screen, text="as well as less number of members in your home.", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=396)
+        elif 5 < f <= 10:
+            Label(screen, text="Your contribution is fairly good towards environment", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=330)
+            Label(screen, text="in this aspect. It could be slightly better. Less the", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=352)
+            Label(screen, text="size of your home, less is impact on the environment,", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=374)
+            Label(screen, text="as well as less number of members in your home.", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=396)
+        elif 11 <= f < 15:
+            Label(screen, text="Your contribution is average towards environment", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=330)
+            Label(screen, text="in this aspect. It could be improved. Less the", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=352)
+            Label(screen, text="size of your home, less is impact on the environment,", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=374)
+            Label(screen, text="as well as less number of members in your home.", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=396)
+        elif f > 15:
+            Label(screen, text="Your contribution is poor towards environment", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=330)
+            Label(screen, text="in this aspect. Small choice impacts environment.", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=352)
+            Label(screen, text="Less the size of your home, less is impact on the ", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=374)
+            Label(screen, text="environment, as well as less number of members in your home.", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=396)
+    def next1():
+        def add():
+            bb1 = userinfo3.get()
+            cb11 = 2
+            cb22 = 4
+            cb33 = 6
+            cb44 = 8
+            cb55 = 10
+            if bb1 == "vegan":
+                d1 = cb11
+                #Label(screen, text=d1, fg="blue").place(x=850, y=200)
+            elif bb1 == "wild meat":
+                d1 = cb22
+                #Label(screen, text=d1, fg="blue").place(x=850, y=200)
+            elif bb1 == "veg":
+                d1 = cb33
+                #Label(screen, text=d1, fg="blue").place(x=850, y=200)
+            elif bb1 == "domestic meat few times a week":
+                d1 = cb44
+                #Label(screen, text=d1, fg="blue").place(x=850, y=200)
+            elif bb1 == "domestic meat daily":
+                d1 = cb55
+                #Label(screen, text=d1, fg="blue").place(x=850, y=200)
+
+            bc = userinfo4.get()
+            cc1 = 0
+            cc2 = 2
+            cc3 = 4
+            cc4 = 6
+
+            if bc == "none":
+                e1 = cc1
+                """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+            elif bc == "1-3 times":
+                e1 = cc2
+                """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+            elif bc == "4-9 times":
+                e1 = cc3
+                """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+            elif bc == "9+ times":
+                e1 = cc4
+                """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+
+            bd1 = userinfo5.get()
+            cd11 = 2
+            cd22 = 4
+            cd33 = 6
+            cd44 = 8
+            cd55 = 10
+            if bd1 == "1/2":
+                f1 = cd11
+                #Label(screen, text=f1, fg="blue").place(x=850, y=400)
+            elif bd1 == "1":
+                f1 = cd22
+                #Label(screen, text=f1, fg="blue").place(x=850, y=400)
+            elif bd1 == "2":
+                f1 = cd33
+                #Label(screen, text=f1, fg="blue").place(x=850, y=400)
+            elif bd1 == "3":
+                f1 = cd44
+                """Label(screen, text=d, fg="blue").place(x=850, y=200)"""
+            elif bd1 == "3+":
+                f1 = cd55
+                """Label(screen, text=d, fg="blue").place(x=850, y=200)"""
+            f = d1+e1+f1
+            Label(screen, text=f, fg="#38ae3c", bg="#ececec", font="ariel 16 bold").place(x=602, y=332)
+            if f < 7:
+                Label(screen, text="Your contribution is very good towards environment", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=380)
+                Label(screen, text="in this aspect. Please keep that consistent.Your", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=402)
+                Label(screen, text="activities that we analyzed are perfect for ", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=424)
+                Label(screen, text="keeping the environment healthy.", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=446)
+            elif 7 < f <= 10:
+                Label(screen, text="Your contribution is fairly good towards environment", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=380)
+                Label(screen, text="in this aspect. It could be slightly better. Your", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=402)
+                Label(screen, text="activities that we analyzed is not perfect but very", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=424)
+                Label(screen, text="good attempt for healthy environment.", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=446)
+            elif 11 <= f < 15:
+                Label(screen, text="Your contribution is average towards environment", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=380)
+                Label(screen, text="in this aspect. It could be improved. Focus on your", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=402)
+                Label(screen, text="diet, garbage cans produced from your home as well as", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=424)
+                Label(screen, text="usage of dishwasher/ washing machine.", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=446)
+            elif 15 <= f < 19:
+                Label(screen, text="Your contribution is quite poor towards environment", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=380)
+                Label(screen, text="in this aspect. Your food choice as well as amount", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=402)
+                Label(screen, text="of waste produced, impacts environment. Please use ", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=424)
+                Label(screen, text="dishwasher/washing machine when required, to", fg="grey",
+                      bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=446)
+                Label(screen, text="consume less energy.", fg="grey",
+                      bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=468)
+            elif f > 19:
+               Label(screen, text="Your contribution is very poor towards environment", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=380)
+               Label(screen, text="in this aspect. Your food choice as well as amount", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=402)
+               Label(screen, text="of waste produced, impacts environment. Please use ", fg="grey", bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=424)
+               Label(screen, text="dishwasher/washing machine when required, to", fg="grey",
+                  bg="#ececec",
+                  font="ariel 13 ").place(x=474, y=446)
+               Label(screen, text="consume less energy.", fg="grey",
+                     bg="#ececec",
+                     font="ariel 13 ").place(x=474, y=468)
+
+        def next2():
+            def add1():
+                tb1 = userinfo6.get()
+                ct11 = 12
+                ct22 = 10
+                ct33 = 8
+                ct44 = 6
+                ct55 = 0
+                if tb1 == "more than 15k":
+                    dt1 = ct11
+                    # Label(screen, text=d1, fg="blue").place(x=850, y=200)
+                elif tb1 == "10k-15k":
+                    dt1 = ct22
+                    # Label(screen, text=d1, fg="blue").place(x=850, y=200)
+                elif tb1 == "1k-10k":
+                    dt1 = ct33
+                    # Label(screen, text=d1, fg="blue").place(x=850, y=200)
+                elif tb1 == "less than 1k":
+                    dt1 = ct44
+                    # Label(screen, text=d1, fg="blue").place(x=850, y=200)
+                elif tb1 == "no personal vehicle":
+                    dt1 = ct55
+                    # Label(screen, text=d1, fg="blue").place(x=850, y=200)
+
+                btc = userinfo7.get()
+                tcc1 = 14
+                tcc2 = 12
+                tcc3 = 10
+                tcc4 = 0
+
+
+                if btc == "continent to continent":
+                    et1 = tcc1
+                    """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+                elif btc == "country to country":
+                    et1 = tcc2
+                    """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+                elif btc == "state to state":
+                    et1 = tcc3
+                    """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+                elif btc == "no flights":
+                    et1 = tcc4
+                    """Label(screen, text=e, fg="blue").place(x=850, y=300)"""
+
+                btd1 = userinfo8.get()
+                ctd11 = 8
+                ctd22 = 6
+                ctd33 = 4
+                ctd44 = 2
+
+                if btd1 == "more than 15k":
+                    ft1 = ctd11
+                    # Label(screen, text=f1, fg="blue").place(x=850, y=400)
+                elif btd1 == "10k-15k":
+                    ft1 = ctd22
+                    # Label(screen, text=f1, fg="blue").place(x=850, y=400)
+                elif btd1 == "1k-10k":
+                    ft1 = ctd33
+                    # Label(screen, text=f1, fg="blue").place(x=850, y=400)
+                elif btd1 == "less than 1k":
+                    ft1 = ctd44
+                    """Label(screen, text=d, fg="blue").place(x=850, y=200)"""
+
+
+                bte1 = userinfo9.get()
+                cte11 = 14
+                cte22 = 12
+                cte33 = 8
+                cte44 = 6
+                cte55 = 2
+                cte66 = 10
+
+                if bte1 == "petrol":
+                    gt1 = cte11
+                    # Label(screen, text=f1, fg="blue").place(x=850, y=400)
+                elif bte1 == "diesel":
+                    gt1 = cte22
+                    # Label(screen, text=f1, fg="blue").place(x=850, y=400)
+                elif bte1 == "CNG":
+                    gt1 = cte33
+                    # Label(screen, text=f1, fg="blue").place(x=850, y=400)
+                elif bte1 == "CNG and electric":
+                    gt1 = cte44
+                    """Label(screen, text=d, fg="blue").place(x=850, y=200)"""
+                elif bte1 == "electric":
+                    gt1 = cte55
+                    """Label(screen, text=d, fg="blue").place(x=850, y=200)"""
+                elif bte1 == "petrol and electric":
+                    gt1 = cte66
+                    """Label(screen, text=d, fg="blue").place(x=850, y=200)"""
+
+                f = et1 + ft1 + dt1 + gt1
+                Label(screen, text=f, fg="#38ae3c", bg="#ececec", font="ariel 16 bold").place(x=602, y=402)
+                if f < 11:
+                    Label(screen, text="Your contribution is very good towards environment", fg="grey", bg="#ececec",
+                          font="ariel 13 ").place(x=474, y=448)
+                    Label(screen, text="in this aspect. Please keep that consistent.", fg="grey", bg="#ececec",
+                          font="ariel 13 ").place(x=474, y=470)
+
+                elif 11 < f <= 21:
+                    Label(screen, text="Your contribution is fairly good towards environment", fg="grey", bg="#ececec",
+                          font="ariel 13 ").place(x=474, y=448)
+                    Label(screen, text="in this aspect. It could be slightly better.", fg="grey", bg="#ececec",
+                          font="ariel 13 ").place(x=474, y=470)
+
+                elif 22 <= f < 31:
+                    Label(screen, text="Your contribution is average towards environment", fg="grey", bg="#ececec",
+                          font="ariel 13 ").place(x=474, y=448)
+                    Label(screen, text="in this aspect. It should be improved.", fg="grey", bg="#ececec",
+                          font="ariel 13 ").place(x=474, y=470)
+
+                elif 32 <= f < 42:
+                    Label(screen, text="Your contribution is quite poor towards environment", fg="grey", bg="#ececec",
+                          font="ariel 13 ").place(x=474, y=448)
+                    Label(screen, text="in this aspect. Follow the tips on next page.", fg="grey", bg="#ececec",
+                          font="ariel 13 ").place(x=474, y=470)
+
+                elif f > 42:
+                    Label(screen, text="Your contribution is very poor towards environment", fg="grey", bg="#ececec",
+                          font="ariel 13 ").place(x=474, y=448)
+                    Label(screen, text="in this aspect. Follow the tips on next page.", fg="grey", bg="#ececec",
+                          font="ariel 13 ").place(x=474, y=470)
+
+            def next3():
+                frame = Frame(screen, width="390", height="800", bg="#38ae3c")
+                frame.place(x=0, y=0)
+                frame1 = Frame(screen, width="610", height="800", bg="#ececec")
+                frame1.place(x=390, y=0)
+                Label(screen, text="Tips and Solution", bg="#38ae3c", fg="white", font="Alfa_Slab_One 23 bold").place(x=60,
+                                                                                                              y=80)
+                Label(screen, text="We will provide tips and", bg="#38ae3c", fg="white", font="ariel 16 bold").place(
+                    x=70,
+                    y=375)
+                Label(screen, text="solution regarding your", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70,
+                                                                                                            y=402)
+                Label(screen, text="transportation.", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70, y=427)
+
+                img2 = Image.open('C:\\Users\\Dell\\OneDrive\\Desktop\\soln.jpg')
+                i3 = ImageTk.PhotoImage(img2)
+                img2Label = Label(screen, image=i3, border=0)
+                img2Label.image = i3
+                img2Label.place(x=50, y=140)
+                Label(screen, text="To decrease points always try to use public transport.", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=70)
+                Label(screen, text="Use flights in case of extreme emergency. Instead of", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=92)
+                Label(screen, text="having personal car, try to carpool or book cabs. These", fg="grey", bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=114)
+                Label(screen, text="key tips will lower carbon footprint gradually.", fg="grey",
+                      bg="#ececec",
+                      font="ariel 13 ").place(x=474, y=136)
+
+
+
+
+
+            frame = Frame(screen, width="390", height="800", bg="#38ae3c")
+            frame.place(x=0, y=0)
+            frame1 = Frame(screen, width="610", height="800", bg="#ececec")
+            frame1.place(x=390, y=0)
+            Label(screen, text="Transport", bg="#38ae3c", fg="white", font="Alfa_Slab_One 23 bold").place(x=60, y=80)
+            Label(screen, text="We will evaluate details", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70,
+                                                                                                              y=415)
+            Label(screen, text="of your mode of", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70,
+                                                                                                                y=442)
+            Label(screen, text="transportation", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70, y=467)
+
+            img2 = Image.open('C:\\Users\\Dell\\OneDrive\\Desktop\\t1.jpg')
+            i3 = ImageTk.PhotoImage(img2)
+            img2Label = Label(screen, image=i3, border=0)
+            img2Label.image = i3
+            img2Label.place(x=50, y=140)
+            Label(screen, text="How much do you travel by personal vehicle in km per week?", bg="#ececec", fg="grey",
+                  font="Alfa_Slab_One 13").place(
+                x=476, y=60)
+            Label(screen, text="Where do you go by flights?", bg="#ececec", fg="grey",
+                  font="Alfa_Slab_One 13").place(
+                x=476, y=140)
+
+            Label(screen, text="How much do you travel by public transport in km per week?", bg="#ececec", fg="grey",
+                  font="Alfa_Slab_One 13").place(
+                x=476, y=225)
+            Label(screen, text="Which fuel does your preferred transport use?", bg="#ececec", fg="grey",
+                  font="Alfa_Slab_One 13").place(
+                x=476, y=315)
+            Label(screen, text="Your score:", fg="grey", bg="#ececec", font="Alfa_Slab_One 16 bold", padx=5,
+                  pady=5).place(x=470, y=398)
+            Button(screen, text="calculate", font="ariel 11 bold", fg="green", bg="#ececec", border=0, width=15,
+                   height=1,
+                   command=add1
+                   ).place(x=510, y=520)
+            Button(screen, text="tips", font="ariel 11 bold", bg="#38ae3c", fg="white", border=0, width=15, height=1,
+                   command=next3).place(x=660, y=520)
+            """Button(screen, text="click", font="ariel 11 bold", bg="blue", fg="white", border=0, width=15, height=1,
+                   command=click1).place(x=660, y=520)"""
+            userinfo6 = StringVar()
+            user_entry6 = Entry(screen, font="ariel 12", textvariable=userinfo6, border=0, fg="#38ae3c")
+            user_entry6.place(x=475, y=85)
+            user_entry6.place(width=440, height=30)
+            userinfo7 = StringVar()
+            user_entry7 = Entry(screen, font="ariel 12", textvariable=userinfo7, border=0, fg="#38ae3c")
+            user_entry7.place(x=475, y=165)
+            user_entry7.place(width=440, height=30)
+            userinfo8 = StringVar()
+            user_entry8 = Entry(screen, font="ariel 12", textvariable=userinfo8, border=0, fg="#38ae3c")
+            user_entry8.place(x=475, y=251)
+            user_entry8.place(width=440, height=30)
+            userinfo9 = StringVar()
+            user_entry9 = Entry(screen, font="ariel 12", textvariable=userinfo9, border=0, fg="#38ae3c")
+            user_entry9.place(x=475, y=340)
+            user_entry9.place(width=440, height=30)
+
+
+
+        frame = Frame(screen, width="390", height="800", bg="#38ae3c")
+        frame.place(x=0, y=0)
+        frame1 = Frame(screen, width="610", height="800", bg="#ececec")
+        frame1.place(x=390, y=0)
+        Label(screen, text="Activities", bg="#38ae3c", fg="white", font="Alfa_Slab_One 23 bold").place(x=70, y=80)
+        Label(screen, text="We will evaluate your", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70, y=375)
+        Label(screen, text="activities such as your", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70, y=402)
+        Label(screen, text="food choice, waste", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70, y=427)
+        Label(screen, text="produced per week,etc...", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70,y=454)
+        img1 = Image.open('C:\\Users\\Dell\\OneDrive\\Desktop\\activityicon2.jpg')
+        i2 = ImageTk.PhotoImage(img1)
+        img1Label = Label(screen, image=i2, border=0)
+        img1Label.image = i2
+        img1Label.place(x=30, y=125)
+        Label(screen, text="What is your food choice?", bg="#ececec", fg="grey",
+              font="Alfa_Slab_One 13").place(
+            x=476, y=60)
+        Label(screen, text="How much do you use dishwasher/washing machine", bg="#ececec", fg="grey",
+              font="Alfa_Slab_One 13").place(
+            x=476, y=140)
+        Label(screen, text="per week?", bg="#ececec", fg="grey",
+              font="Alfa_Slab_One 13").place(
+            x=476, y=160)
+        Label(screen, text="How much garbage cans are produced per day?", bg="#ececec", fg="grey",
+              font="Alfa_Slab_One 13").place(
+            x=476, y=245)
+        Label(screen, text="Your score:", fg="grey", bg="#ececec", font="Alfa_Slab_One 16 bold", padx=5,
+              pady=5).place(x=470, y=328)
+        Button(screen, text="calculate", font="ariel 11 bold", fg="green", bg="#ececec", border=0, width=15, height=1,
+               command=add
+               ).place(x=510, y=520)
+        Button(screen, text="next", font="ariel 11 bold", bg="#38ae3c", fg="white", border=0, width=15, height=1,
+               command=next2).place(x=660, y=520)
+        """Button(screen, text="click", font="ariel 11 bold", bg="blue", fg="white", border=0, width=15, height=1,
+               command=click1).place(x=660, y=520)"""
+        userinfo3 = StringVar()
+        user_entry3 = Entry(screen, font="ariel 12", textvariable=userinfo3, border=0, fg="#38ae3c")
+        user_entry3.place(x=476, y=85)
+        user_entry3.place(width=380, height=30)
+        userinfo4 = StringVar()
+        user_entry4 = Entry(screen, font="ariel 12", textvariable=userinfo4, border=0, fg="#38ae3c")
+        user_entry4.place(x=476, y=185)
+        user_entry4.place(width=380, height=30)
+        userinfo5 = StringVar()
+        user_entry5 = Entry(screen, font="ariel 12", textvariable=userinfo5, border=0, fg="#38ae3c")
+        user_entry5.place(x=476, y=271)
+        user_entry5.place(width=380, height=30)
+
+    a = userinfo.get()
+    if a == "":
+        Label(screen, text="please enter", fg="red", bg="#ececec").place(x=860, y=260)
+    else:
+
+        frame1 = Frame(screen, width = "390", height = "800", bg="#38ae3c")
+        frame1.place(x=0, y=0)
+        frame1 = Frame(screen, width="610", height="800", bg="#ececec")
+        frame1.place(x=390, y=0)
+        img1 = Image.open('C:\\Users\\Dell\\OneDrive\\Desktop\\homeicon.jpg')
+        i2 = ImageTk.PhotoImage(img1)
+        img1Label = Label(screen, image=i2, border=0)
+        img1Label.image = i2
+        img1Label.place(x=30, y=130)
+        Label(screen, text="We will evaluate your",bg="#38ae3c", fg="white", font = "ariel 16 bold" ).place(x=70,y=375)
+        Label(screen, text="some details of home", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70, y=402)
+        Label(screen, text="such as home size,", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70, y=427)
+        Label(screen, text="number of members,etc...", bg="#38ae3c", fg="white", font="ariel 16 bold").place(x=70, y=454)
+        Label(screen, text="Living", bg="#38ae3c", fg="white", font="Alfa_Slab_One 23 bold").place(x=70, y=80)
+        Label(screen, text="How many members stay in your house?", bg="#ececec", fg="grey", font="Alfa_Slab_One 13").place(
+       x=476, y=100)
+        Label(screen, text="What is the size of your home?", bg="#ececec", fg="grey",
+              font="Alfa_Slab_One 13").place(
+            x=476, y=190)
+        Label(screen, text="Your score:", fg="grey", bg="#ececec", font="Alfa_Slab_One 16 bold", padx=5,
+              pady=5).place(x=470, y=280)
+        Button(screen, text="calculate", font="ariel 11 bold", fg="green", bg="#ececec", border=0, width=15, height=1,command=clear2
+           ).place(x=510, y=450)
+        Button(screen, text="next", font="ariel 11 bold", bg="#38ae3c", fg="white", border=0, width=15, height=1,
+           command=next1).place(x=660, y=450)
+        """Button(screen, text="click", font="ariel 11 bold", bg="blue", fg="white", border=0, width=15, height=1,
+               command=click1).place(x=660, y=520)"""
+        userinfo1 = StringVar()
+        user_entry1 = Entry(screen, font="ariel 12", textvariable=userinfo1, border=0, fg="#38ae3c")
+        user_entry1.place(x=476, y=125)
+        user_entry1.place(width=380, height=30)
+        userinfo2 = StringVar()
+        user_entry2 = Entry(screen, font="ariel 12", textvariable=userinfo2, border=0, fg="#38ae3c")
+        user_entry2.place(x=476, y=215)
+        user_entry2.place(width=380, height=30)
+
+
+
+def clear1():
+    user_entry.delete(0, END)
+
+
+
+frame  = Frame(screen, width = "390", height = "800", bg ="#38ad3c")
+frame.place(x=0,y=0)
+global img
+img = Image.open('C:\\Users\\Dell\\OneDrive\\Desktop\\icon1.jpg')
+i1 = ImageTk.PhotoImage(img)
+imgLabel = Label(screen,image=i1,border = 0)
+imgLabel.image=i1
+imgLabel.place(x=20,y=140)
+Label(screen, text="Less is More",fg = "white",bg = "#38ae3c" , font= "Michroma 24 bold").place(x=90,y=400)
+  # Label(screen, text="Calc", fg="white", bg="#38ae3c", font="ariel 18 bold").place(x=130, y=428)
+Label(screen, text="Sign up!", fg="#38ad3c",bg = "#ececec", font = "Alfa_Slab_One 21 bold").place(x=630,y=120)
+Label(screen, text="to take small step for environment",bg = "#ececec", fg="grey", font="Alfa_Slab_One 13").place(x=560, y=160)
+Label(screen, text="After logging in your step towards environment will be", bg="#ececec", fg="grey", font="Alfa_Slab_One 13").place(x=470, y=305)
+Label(screen,text="calculated. Based on those results we will provide",bg="#ececec", fg="grey", font="Alfa_Slab_One 13").place(x=470, y=327)
+Label(screen,
+         text="necessary solutions regarding it.",
+         bg="#ececec", fg="grey", font="Alfa_Slab_One 13").place(x=470, y=347)
+Label(screen,
+         text="___________________________________________",
+         bg="#ececec", fg="grey", font="Alfa_Slab_One 13").place(x=470, y=370)
+Label(screen, text="Enter username", fg="grey",bg = "#ececec", font="Alfa_Slab_One 16 bold",padx=5,pady=5).place(x=470, y=220)
+Button(screen, text="register", font="ariel 11 bold", bg="#38ae3c", fg="white",border=0,width = 15,height = 1,command=next).place(x=660, y=420)
+
+Button(screen, text="clear", font="ariel 11 bold", fg="green", bg="#ececec", border=0, width=15, height=1,command=clear1).place(x=510, y=420)
+
+
+
+userinfo =StringVar()
+user_entry = Entry(screen, font="ariel 12", textvariable=userinfo,border=0,fg="#38ae3c")
+user_entry.place(x=476, y=260)
+user_entry.place(width=380, height=30)
+
+
+
+
+mainloop()
